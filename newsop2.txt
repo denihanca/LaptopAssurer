@@ -1,0 +1,94 @@
+Install via PXE:
+- connect via LAN
+- esc > F12 > F12 > next
+
+If computer is not yet in the domain:
+- select (bare metal) - JAKARTA ONLY
+- input new computer name (ID-L-...)
+- computer name will automatically be registered to symantec
+- move computer in symantec management page to CLIENT-KOMPAK group
+
+If computer is already in domain:
+- select REFRESH No vSMP - JAKARTA ONLY
+- computer name is reserved from the previous one
+- First, remove computer name from symantec management page.
+- The installer will automatically add computer again to symantec
+
+After installed:
+- Go to AD controller
+- check computer name in AD, move to IDN > Jakarta/Surabaya/Mataram/Others
+- Go to Symantec management
+- Make sure computer is registered and not doubled
+
+- Enable PS remoting
+
+fix timezone
+- CMD > tzutil /s "SE Asia Standard Time"
+>>> dlg.TypeKeys('tzutil /s "SE Asia Standard Time"{ENTER}', with_spaces = True)
+
+install bluetooth driver:
+- CMD > net use z: \\id-s-file1\ittools\mandatory
+- CMD > z:\840g3\bluetooth.sp74472.exe
+>>> dlg.TypeKeys('net use z: \\\id-s-file1\\ittools\\mandatory{ENTER}', with_spaces = True)
+>>> app.start("z:\\\840G3\\bluetooth.sp74472.exe")
+>>> app.start("z:\\\840G3\\bluetooth.sp74472.exe")
+>>> app.window_().TypeKeys('{ENTER}')
+>>> app.window_().TypeKeys('A{ENTER}')
+>>> app.window_().TypeKeys('{ENTER}')
+>>>
+
+install webcam driver:
+- CMD > z:\840g3\webcam.sp77963.exe
+>>> app.start("z:\\\840G3\\webcam.sp77963.exe")
+>>> app.window_().TypeKeys('{ENTER}')
+>>> app.window_().TypeKeys('A{ENTER}')
+>>> app.window_().TypeKeys('{ENTER}')
+>>>
+
+Update windows
+install fonts
+gpupdate
+
+Install Skype
+
+Install symantec
+
+Update symantec definition
+
+set VPN
+- set to remote.kompak.or.id, name VPN Kompak
+- do not remember credential, set enable to all user
+-- change adapter settings > VPN > properties > Networking > Internet Protocol Version 4 > Properties > Advanced > IP settings > [uncheck] Use default gateway on remote network
+
+install programs
+- run cmd as administrator (B9)
+- set z drive to installer folder: net use Z: \\id-s-file1\ittools\Mandatory
+-- Skype: do not enable MSN and Bing
+-- Install fonts in AbtJTAFonts recursively
+-- Install and activate MS Office
+--- Install office
+--- activate office
+cscript "C:\Program Files\Microsoft Office\Office15\OSPP.VBS" /inpkey:GH9CN-CTG6X-P8XF9-QJHHH-M4D67
+--- click activate via internet
+--- set File > Options > Advanced > Display > Disable hardware graphics acceleration
+
+setup domain user
+
+- Check user in AD, move from Users (global) to the correct OU (Jakarta/Surabaya/Mataram)
+
+
+- check that user has access through VPN: Properties > Dial-in > Network Access Permission > Allow Access
+start user comp
+
+add P drive
+net use P: \\brisbane.jtai.com.au\IDN\kompakbusiness
+
+
+
+Install logmein
+
+Apply kompak Asset register sticker
+
+check CRMC and Adaptiva
+
+Done

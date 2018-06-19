@@ -1,0 +1,15 @@
+<Configuration> 
+  <Add SourcePath="\\id-s-file1\ittools\Mandatory\o365\DC" 
+       OfficeClientEdition="64" 
+       Channel="Current"> 
+   <Product ID="O365ProPlusRetail" > 
+     <Language ID="en-us" />           
+     <ExcludeApp ID="Publisher" />
+   </Product> 
+  </Add> 
+  <Updates Enabled="TRUE" 
+           UpdatePath=""
+           Channel="Deferred" />  
+  <Display Level="None" 
+           AcceptEULA="TRUE" />
+</Configuration>

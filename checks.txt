@@ -1,0 +1,102 @@
+CHECKS:
+
+- Outside the computer:
+-- Is computer in the corect OU in AD
+-- Is computer already registered in Symantec (not doubled)
+
+- Does computer have:
+-- Windows activated	-im
+-- correct timezone			-ps
+-- Bluetooth 					-man
+-- skype					-ps
+-- symantec				-im
+-- correct fonts				-man
+-- CCM and Adaptiva		-im
+-- Silverlight				-ps
+-- Chrome					-ps
+-- Set as default programs: 7z, foxit, and chrome (assoc, ftype)	-man
+-- proper shortcuts in taskbar: Outlook, Word, Excel, Skype			-man
+
+- After a user is installed, does the user have:
+-- VPN Kompak				-ps
+-- Outlook Setup				-man
+-- Office activated				-man
+-- Correct shared drives (P:/T:/R:/other)	-man
+
+
+- Final checks, does it have:
+-- windows updated				-man
+-- symantec definition updated and registered	-man
+-- Asset register sticker applied	-man
+-- Asset assigned to user in Asset Management with form printed and signed	-man
+-- Induction form printed	-man
+
+Steps:
+- enable psremoting
+- check AD
+- gpupate
+- run laptopassurer
+- install bluetooth
+- set default programs: 7z and foxit
+- set lan precedence over wifi, and ipv4 over ipv6
+- Make shortcuts for Outlook, Word, Excel, Skype for business
+- check symantec registration
+- check asset tag
+- Have user login
+- setup Outlook
+- activate Office
+- setup Office
+- setup VPN
+
+Steps:
+- manual:
+-- Install from PXE
+-- check AD
+-- net use z:
+-- prela
+- Prela:
+-- gpupdate
+-- enable psremoting
+-- set power option never to sleep
+- LaptopAssurer:
+#windows activation
+#Microsoft Visual C++ 2015 Redistributables 64 bit
+#Check timezone
+#wannacry fix kb4012213 or kb4012216 or later
+#check 7z
+#check VLC
+#check Foxit
+#check skype
+#check disabled SMBv1
+#check adaptiva
+#check CCM
+#check vpn for user
+#check fonts (Gotham and Mercury)
+#check if office 2016 exist	
+#check if Java 8 exist
+#check if Flash player exist
+#check BIOS LAN / WLAN auto switching
+#check lan over wifi and IPv4 over IPv6
+#check chrome
+#check silverlight
+#check bluetooth
+#check symantec
+#check webex productivity tools
+#copy postla
+Postla
+- As admin:
+-- Install bluetooth
+-- As admin: set 7-zip as default
+-- updating windows
+-- updating symantec
+-- rename computer - restart later
+-- check symantec license
+- As user:
+-- As user: set foxit and chrome as default
+-- As user: install webex chrome plugin
+-- Test webex
+-- Shortcuts in taskbar
+-- setup outlook, lync, activate office
+-- setup vpn
+-- restart and log back in
+----Finish
